@@ -30,4 +30,10 @@ private EtudiantDao etudiantDao;
 			etudiant = null;
 			
 		}
+	
+	public void modifierEtudiant(Etudiant etudiant) {
+		
+		etudiantDao.modifierEtudiant(etudiant);
+		
+	}
 }

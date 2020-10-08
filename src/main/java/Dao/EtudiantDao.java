@@ -55,5 +55,30 @@ public class EtudiantDao {
 			}
 		
 			}
+		
+		public void modifierEtudiant( Etudiant etudiant) {
+			
+			try {
+			EntityManagerFactory emf = Persistence.createEntityManagerFactory("ensupJpa");
+			EntityManager em = emf.createEntityManager();
+			
+			EntityTransaction tx = em.getTransaction();
+			
+			Etudiant etudiantRemove = em.find(Etudiant.class, etudiant.getId());
+
+			  tx.begin();
+			  
+			  em.find(Etudiant.class, etudiant.getId());
+			  etudiant.setNom("Toto");
+			  
+			  tx.commit();
+			
+			em.close();
+			
+	}catch(PersistentObjectException e) {
+			
+		}
+	
+		}
 
 }

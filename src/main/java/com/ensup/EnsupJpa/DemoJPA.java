@@ -21,14 +21,16 @@ public class DemoJPA {
 		//Cours francais = new Cours("Francais");
 		
 		Etudiant giovanni = new Etudiant("Simon","Giovanni");
-		//Etudiant braham = new Etudiant("Moussouni","Braham",francais);
+		Etudiant braham = new Etudiant("Moussouni","Braham");
 		
 		
 		EtudiantService etudiantService=new EtudiantService();
 		CoursService coursService=new CoursService();
 		
 		etudiantService.addEtudiant(giovanni);
+		etudiantService.addEtudiant(braham);
 		etudiantService.supprimerEtudiant(giovanni);
+		etudiantService.modifierEtudiant(braham);
 		//etudiantService.addEtudiant(braham);
 		//coursService.addCours(francais, giovanni);
 
