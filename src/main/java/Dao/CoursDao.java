@@ -12,6 +12,8 @@ import metier.Etudiant;
 
 public class CoursDao {
 	
+	//Ajoute un cours dans la base
+
 	public void insererCours( Cours cours, Etudiant etudiant) {
 		
 		try {

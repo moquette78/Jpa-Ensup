@@ -17,6 +17,9 @@ public class CoursService {
 	 * ajout etudiant
 	 * @param etudiant
 	 */
+	
+	//Ajoute un cours dans la base
+	
 	public void addCours(Cours cours, Etudiant etudiant) {
 		
 		cours.getEtudiants().add(etudiant);

@@ -11,6 +11,7 @@ import metier.Etudiant;
 
 public class EtudiantDao {
 	
+	//Insere un etudiant dans la base
 	public void insererEtudiant( Etudiant etudiant) {
 		
 		try {
@@ -32,6 +33,8 @@ public class EtudiantDao {
 
 	}
 	
+	//Supprime un etudiant dans la base
+
 		public void supprimerEtudiant( Etudiant etudiant) {
 				
 				try {
@@ -56,6 +59,8 @@ public class EtudiantDao {
 		
 			}
 		
+		//Modifie un etudiant dans la base
+
 		public void modifierEtudiant( Etudiant etudiant) {
 			
 			try {

@@ -18,12 +18,17 @@ private EtudiantDao etudiantDao;
 	 * ajout etudiant
 	 * @param etudiant
 	 */
+	
+	//Insere un etudiant dans la base
+
 	public void addEtudiant(Etudiant etudiant) {
 		
 		etudiantDao.insererEtudiant(etudiant);
 		
 	}
 	
+	//Supprime un etudiant dans la base
+
 	public void supprimerEtudiant(Etudiant etudiant) {
 			
 			etudiantDao.supprimerEtudiant(etudiant);
@@ -31,6 +36,8 @@ private EtudiantDao etudiantDao;
 			
 		}
 	
+	//Modifie un etudiant dans la base
+
 	public void modifierEtudiant(Etudiant etudiant) {
 		
 		etudiantDao.modifierEtudiant(etudiant);
