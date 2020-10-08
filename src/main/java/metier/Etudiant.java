@@ -69,6 +69,13 @@ public class Etudiant {
 	public int getId() {
 		return id;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", cours=" + cours + "]";
+	}
 	
 	
 	

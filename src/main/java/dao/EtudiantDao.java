@@ -69,14 +69,18 @@ public class EtudiantDao {
 			
 			EntityTransaction tx = em.getTransaction();
 			
-			Etudiant etudiantRemove = em.find(Etudiant.class, etudiant.getId());
-
+			
+			Etudiant etudiantUpdate  = em.find(Etudiant.class, etudiant.getId());
+			etudiantUpdate.setNom("Toto");
+			
+			  //em.find(Etudiant.class, etudiant.getId());
+			  
 			  tx.begin();
 			  
-			  em.find(Etudiant.class, etudiant.getId());
-			  etudiant.setNom("Toto");
+			    em.merge(etudiantUpdate);
 			  
 			  tx.commit();
+			  
 			
 			em.close();
 			
@@ -84,6 +88,26 @@ public class EtudiantDao {
 			
 		}
 	
+		}
+		
+public Etudiant selectionnerEtudiant( Etudiant etudiant) {
+			
+	Etudiant etudiantSelect = new Etudiant();
+	
+			try {
+			EntityManagerFactory emf = Persistence.createEntityManagerFactory("ensupJpa");
+			EntityManager em = emf.createEntityManager();
+			
+			 etudiantSelect = em.find(Etudiant.class, etudiant.getId());
+			
+			  
+			
+			em.close();
+			
+	}catch(PersistentObjectException e) {
+			
+		}
+			return etudiantSelect;
 		}
 
 }

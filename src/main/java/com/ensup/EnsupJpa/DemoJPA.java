@@ -23,7 +23,6 @@ public class DemoJPA {
 		Etudiant giovanni = new Etudiant("Simon","Giovanni");
 		Etudiant braham = new Etudiant("Moussouni","Braham");
 		
-		
 		EtudiantService etudiantService=new EtudiantService();
 		CoursService coursService=new CoursService();
 		
@@ -31,6 +30,8 @@ public class DemoJPA {
 		etudiantService.addEtudiant(braham);
 		etudiantService.supprimerEtudiant(giovanni);
 		etudiantService.modifierEtudiant(braham);
+		System.out.println(etudiantService.selectionnerEtudiant(braham).toString());
+		
 		//etudiantService.addEtudiant(braham);
 		//coursService.addCours(francais, giovanni);
 

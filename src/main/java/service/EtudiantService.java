@@ -43,4 +43,10 @@ private EtudiantDao etudiantDao;
 		etudiantDao.modifierEtudiant(etudiant);
 		
 	}
+	
+	public Etudiant selectionnerEtudiant(Etudiant etudiant) {
+			
+			return etudiantDao.selectionnerEtudiant(etudiant);
+			
+		}
 }
