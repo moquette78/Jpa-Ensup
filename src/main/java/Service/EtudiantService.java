@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import Dao.EtudiantDao;
+import dao.EtudiantDao;
 import metier.Etudiant;
 
 public class EtudiantService {
@@ -23,4 +23,11 @@ private EtudiantDao etudiantDao;
 		etudiantDao.insererEtudiant(etudiant);
 		
 	}
+	
+	public void supprimerEtudiant(Etudiant etudiant) {
+			
+			etudiantDao.supprimerEtudiant(etudiant);
+			etudiant = null;
+			
+		}
 }

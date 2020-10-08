@@ -1,7 +1,7 @@
-package Service;
+package service;
 
-import Dao.CoursDao;
-import Dao.EtudiantDao;
+import dao.CoursDao;
+import dao.EtudiantDao;
 import metier.Cours;
 import metier.Etudiant;
 

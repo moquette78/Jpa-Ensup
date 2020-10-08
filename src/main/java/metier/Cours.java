@@ -19,9 +19,12 @@ public class Cours {
 	private Long id;
 	private String theme;
 	
-	@OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
+	@OneToMany(mappedBy = "cours")
 	private Collection<Etudiant> etudiants ;
 	
+	public Cours() {
+		
+	}
 	
 	public Cours(String theme) {
 		super();
