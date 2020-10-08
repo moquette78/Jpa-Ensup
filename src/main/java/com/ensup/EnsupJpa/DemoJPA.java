@@ -11,6 +11,7 @@ import metier.Cours;
 import metier.Etudiant;
 import service.CoursService;
 import service.EtudiantService;
+import service.IEtudiantService;
 
 
 public class DemoJPA {
@@ -23,8 +24,7 @@ public class DemoJPA {
 		Etudiant giovanni = new Etudiant("Simon","Giovanni");
 		Etudiant braham = new Etudiant("Moussouni","Braham");
 		
-		EtudiantService etudiantService=new EtudiantService();
-		CoursService coursService=new CoursService();
+		IEtudiantService etudiantService=new EtudiantService();
 		
 		etudiantService.addEtudiant(giovanni);
 		etudiantService.addEtudiant(braham);

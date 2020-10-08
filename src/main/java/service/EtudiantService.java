@@ -1,11 +1,12 @@
 package service;
 
 import dao.EtudiantDao;
+import dao.IEtudiantDao;
 import metier.Etudiant;
 
-public class EtudiantService {
+public class EtudiantService implements IEtudiantService {
 
-private EtudiantDao etudiantDao;
+private IEtudiantDao etudiantDao;
 	
 	/**
 	 * construction

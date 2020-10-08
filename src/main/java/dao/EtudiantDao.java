@@ -9,7 +9,7 @@ import org.hibernate.PersistentObjectException;
 
 import metier.Etudiant;
 
-public class EtudiantDao {
+public class EtudiantDao implements IEtudiantDao {
 	
 	//Insere un etudiant dans la base
 	public void insererEtudiant( Etudiant etudiant) {
